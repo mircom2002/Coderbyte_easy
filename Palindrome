@@ -1,0 +1,11 @@
+def Palindrome(str)
+
+  # code goes here
+  a=str.squeeze.split(' ').to_a
+  a=a.to_s
+  if(a.reverse==a)
+    return "true"
+  end
+  return "false" 
+         
+end
