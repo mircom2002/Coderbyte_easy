@@ -1,0 +1,7 @@
+def AlphabetSoup(str)
+
+  # code goes here
+  a=str.chars
+  return a.sort.to_s
+         
+end
