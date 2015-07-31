@@ -1,0 +1,11 @@
+def ExOh(str)
+
+  # code goes here
+  a=str.count "o"
+  b=str.count "x"
+  if(a==b)
+    return "true"
+  else
+    return "false"
+  end
+end
