@@ -1,0 +1,11 @@
+def LetterCapitalize(str)
+
+  # code goes here
+  a=str.split
+  0.upto a.length-1 do |i|
+    a[i]=a[i].capitalize+' '
+  end
+  
+  return a.to_s.rstrip
+         
+end
