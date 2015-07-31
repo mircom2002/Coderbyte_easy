@@ -1,0 +1,13 @@
+def DashInsert(str)
+  str=str.chars.to_a
+  result=Array.new
+  0.upto str.length-1 do |i|
+    result << str[i]
+    if str[i].to_i % 2 == 1 && str[i+1].to_i % 2 == 1
+      result << '-'
+    end
+  end
+  # code goes here
+  return result.to_s
+         
+end
