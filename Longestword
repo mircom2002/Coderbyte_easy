@@ -1,0 +1,14 @@
+def LongestWord(sen)
+
+  # code goes here
+  a=sen.delete '^a-z '
+  b=a.split(' ')
+  max=b[0]
+  1.upto b.length-1 do |i|
+    if max.length<b[i].length
+      max=b[i]
+    end
+  end
+  return max
+         
+end
