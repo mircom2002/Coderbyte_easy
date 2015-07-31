@@ -1,0 +1,23 @@
+def RunLength(str)
+  result=Array.new
+  count=1
+  buf=str[0]
+  
+  1.upto str.length-1 do |i|
+    if buf==str[i]
+      count=count+1
+    else
+      result << count
+      result << buf.chr
+      buf=str[i]
+      count=1
+    end
+  end
+  
+  result << count
+  result << buf.chr
+  # code goes here
+  
+  return result.to_s
+         
+end
