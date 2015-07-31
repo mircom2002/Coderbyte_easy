@@ -1,0 +1,26 @@
+def ArithGeo(arr)
+  ari=arr[1]-arr[0]
+  geo=arr[1]/arr[0]
+  
+  ariChk=0
+  geoChk=0
+  
+  1.upto arr.length-2 do |i|
+    if arr[i+1]-arr[i] != ari && ariChk==0
+      ariChk=1
+    end
+    
+    if arr[i+1]/arr[i] != geo && geoChk==0
+      geoChk=1
+    end
+  end
+  
+  if ariChk==0
+    return "Arithmetic"
+  elsif geoChk==0
+    return "Geometric"
+  else
+    return -1
+  end
+         
+end
