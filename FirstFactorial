@@ -1,0 +1,10 @@
+def FirstFactorial(num)
+
+  # code goes here
+  f=1
+  1.upto num do |n|
+    f=f*n
+  end
+  return f
+         
+end
