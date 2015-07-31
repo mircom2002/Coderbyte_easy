@@ -1,0 +1,33 @@
+def StringReduction(str)
+
+  # code goes here
+  # 294 = abc
+  chk = true
+  strbuf = str.bytes.to_a
+  index = 0	
+  
+  while true
+    chk=true
+    
+    if index+1==strbuf.length
+      index=0
+      chk=false
+      
+    else
+    
+      if strbuf[index]==strbuf[index+1]
+        index=index+1
+      else
+        strbuf[index]=294-strbuf[index]-strbuf[index+1]
+        strbuf.delete_at(index+1)
+        index=0
+      end
+      
+    end
+    
+    break if chk==false
+  end
+  
+  return strbuf.length
+ 
+end
