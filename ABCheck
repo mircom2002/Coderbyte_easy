@@ -1,0 +1,15 @@
+def ABCheck(str)
+
+  # code goes here
+  strarr = str.bytes.to_a
+  
+  
+  0.upto str.length-4 do |i|
+	if strarr[i]==97 && strarr[i+4]==98
+	    return "true"
+    end
+  end
+  
+  return "false"
+         
+end
