@@ -1,0 +1,10 @@
+def PowersofTwo(num)
+
+  a=Math.sqrt(num)
+  if a==a.to_i
+    return "true"
+  end
+  return "false"
+         
+   
+end
