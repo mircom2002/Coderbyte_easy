@@ -1,0 +1,29 @@
+def CountingMinutesI(str)
+
+  time = str.split('-')
+  f = time[0]
+  fap = f.chars.to_a.last(2).join
+  f = f.delete(fap).split(':')
+  fs=f[0].to_i * 60 + f[1].to_i
+  
+  t = time[1]
+  tap = t.chars.to_a.last(2).join
+  t = t.delete(tap).split(':')
+  ts=t[0].to_i * 60 + t[1].to_i
+  
+  if tap==fap
+    if ts>fs
+      return ts-fs
+    end
+    return ts-fs+1440
+  else
+    if tap=='am'
+      return ts-fs+720
+    end
+    return ts-fs
+  end
+    
+  
+  # code goes here
+         
+end
