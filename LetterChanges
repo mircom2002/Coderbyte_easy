@@ -1,0 +1,9 @@
+def LetterChanges(str)
+
+  # code goes here
+  a = str.tr('a-y','b-z').to_s
+  a = a.tr('aeiou','AEIOU').to_s    
+  return a
+         
+end
+   
