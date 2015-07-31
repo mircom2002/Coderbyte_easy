@@ -1,0 +1,16 @@
+def MultiplicativePersistence(num)
+
+  a = num.to_s.chars.to_a
+  count=0
+  while a.length!=1
+    m=1
+    0.upto a.length-1 do |i|
+      m = m*a[i].to_i
+    end
+    a=m.to_s.chars.to_a
+    count+=1
+  end
+  # code goes here
+  return count 
+         
+end
