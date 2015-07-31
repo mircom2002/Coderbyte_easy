@@ -1,0 +1,27 @@
+def LetterCountI(str)
+  a=str.split
+  maxCount=1
+  gw=-1
+  0.upto a.length-1 do |i|
+    
+    count=1
+    b=a[i].chars.to_a
+    c=0
+    
+    0.upto b.length-2 do |j|
+      c=a[i].length-a[i].delete(b[j]).length
+      if c>count
+        count=c
+      end
+    end
+    
+    if maxCount<count
+      maxCount=count
+      gw=a[i]
+    end
+  end
+  
+  return gw    
+  # code goes here
+         
+end
