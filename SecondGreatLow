@@ -1,0 +1,26 @@
+def SecondGreatLow(arr)
+
+  arr=arr.sort
+  result=Array.new
+  rank=1
+  result << rank
+  0.upto arr.length-2 do |i|
+    if arr[i]==arr[i+1]
+      result << rank
+    else
+      rank += 1
+      result << rank
+    end
+  end
+  
+  r=Array.new
+  if rank==1
+    r<< arr.at(0)
+    r<< arr.at(0)
+  else
+	r << arr.at(result.index(2))
+	r << arr.at(result.index(rank-1))
+  end
+  return r.join(' ')
+         
+end
