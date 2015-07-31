@@ -1,0 +1,15 @@
+def OffLineMinimum(strArr)
+
+  result = Array.new
+  0.upto strArr.length-1 do |i|
+    if strArr[i]=="E"
+      e=strArr.first(i).to_a.sort.first
+      result << e
+      strArr.delete(e)
+      strArr.insert(i, "X")
+    end
+  end
+  
+  return result.join(',')
+         
+end
