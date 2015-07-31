@@ -1,0 +1,20 @@
+def SimpleSymbols(str)
+
+  str=str.bytes.to_a
+  if str.first.to_i>=97 || str.last.to_i>=97
+    return "false"
+  end
+  
+  
+  1.upto str.length-2 do |i|
+  	
+    if str[i].to_i>=97
+      if str[i-1].to_i!=43 || str[i+1].to_i!=43
+        return "false"
+      end
+    end
+    
+  end
+  
+  return "true"
+end
