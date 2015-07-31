@@ -1,0 +1,28 @@
+def SwapII(str)
+
+  # code goes here
+  a=str.split(' ')
+  
+  0.upto a.length-1 do |i|
+    a[i]=a[i].swapcase
+    k=a[i].to_s
+        
+    j=k.index(/[0-9]/)
+    if(j!=nil)
+      l=k.index(/[0-9]/,j+1)
+      
+      if(l!=nil && l!=j)
+        
+        c=k[j]
+        k[j]=k[l]
+        k[l]=c
+        a[i]=k
+      end
+    end
+    a[i]=a[i].to_s+" "
+ 
+  end
+  
+  return a.to_s.rstrip
+         
+end
