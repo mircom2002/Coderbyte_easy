@@ -1,0 +1,41 @@
+def ArrayAdditionI(arr)
+  $chk=0
+  sum = 0
+  $max=arr.max
+  arr-=$max.to_a
+  arr.each { |a| sum+=a }
+
+  if sum==$max
+    return "true"
+  end
+  
+  if sum<$max
+    return "false"
+  end
+  
+  0.upto arr.length-1 do |i|
+    ArrayMinus(sum, arr, i)
+  end
+  
+  if $chk==1
+    return "true"
+  end
+  return "false"
+  
+end
+  
+
+def ArrayMinus(sum, arr, i)
+  i.upto arr.length-1 do |j|
+    sum=sum-arr[i]
+    
+    if sum==$max 
+      $chk=1
+    elsif sum<$max
+      return
+    else
+      ArrayMinus(sum, arr, i+1)
+    end
+  end 
+  return
+end
