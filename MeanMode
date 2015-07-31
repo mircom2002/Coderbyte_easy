@@ -1,0 +1,24 @@
+def MeanMode(arr)
+
+  sum=0
+  modeArr=arr.uniq.sort
+
+  0.upto arr.length-1 do |i|
+    sum=sum+arr[i]
+  end
+  
+  mean=sum/arr.length
+
+  mode=0
+  0.upto modeArr.length-1 do |i|
+    if arr.count(modeArr[i])>mode
+      mode=modeArr[i]
+    end   
+  end
+  
+  if mean==mode
+    return 1
+  end
+  
+  return 0
+end
