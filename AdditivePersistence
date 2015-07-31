@@ -1,0 +1,18 @@
+def AdditivePersistence(num)
+  count=0
+  num=num.to_s.chars.to_a
+
+  while num.length!=1
+    sum=0
+    0.upto num.length-1 do |i|
+      sum=sum+num[i].to_i
+    end
+    
+	num=sum.to_s.chars.to_a        
+    count=count+1
+
+  end
+  # code goes here
+  return count
+         
+end
