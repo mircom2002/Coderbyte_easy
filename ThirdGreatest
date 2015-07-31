@@ -1,0 +1,24 @@
+def ThirdGreatest(strArr)
+  a=Array.new(strArr.length, " ")
+  b=Array.new(strArr.length, 0)
+  
+  0.upto strArr.length-1 do |i|
+    a[strArr.at(i).size] = strArr.at(i)
+    b[strArr.at(i).size] = b[strArr.at(i).size].to_i + 1
+  end
+  a.delete(nil)
+  b.delete(nil)
+  a=a.reverse
+  b=b.reverse
+  
+  rank=3
+  
+  0.upto b.length do |i|
+  	rank=rank-b[i]
+    if rank<=0
+      return a[i]
+    end
+  end
+  # code goes here
+  return a[-1]     
+end
