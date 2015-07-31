@@ -1,0 +1,14 @@
+def NumberAddition(str)
+
+  # code goes here
+  a = str.tr('^0123456789',' ')
+  a = a.squeeze(' ')
+  b = a.split(' ')
+  sum=0
+  0.upto b.size do|i|
+    sum=sum+b.at(i).to_i
+  end
+  
+  return sum
+         
+end
